@@ -13,7 +13,7 @@ import Image from "next/image";
 const Developers = () => {
   return (
     <section className="py-10 px-8 container w-full flex flex-col gap-6">
-      <ArrowLink text="DEVELOPERS" type="subtitle" href="#" />
+      <ArrowLink text="DEVELOPERS" href="#" />
       <div className="grid grid-cols-3 auto-rows-min gap-4">
         <Block
           imgSrc={developersBg}

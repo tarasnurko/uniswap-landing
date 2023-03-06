@@ -44,16 +44,13 @@ interface ArrowLinkProps {
 
 export const ArrowLink = ({ text, href }: ArrowLinkProps) => {
   return (
-    <span className="flex items-center gap-2">
-      <Link
-        href={href}
-        className="text-lg text-primary-text font-normal hover:text-amber-300 transition-colors"
-      >
-        {text}
-      </Link>
-
+    <Link
+      className="flex items-center gap-2 text-lg text-primary-text font-normal hover:text-amber-300 transition-colors"
+      href={href}
+    >
+      {text}
       <Image src={arrowRight} alt="arrow-right" className="w-5 h-5" />
-    </span>
+    </Link>
   );
 };
 
@@ -88,13 +85,14 @@ interface ButtonLink {
 
 export const ButtonLink = ({ text, href }: ButtonLink) => {
   return (
-    <div className="p-[2px] w-fit flex justify-center items-center bg-[#676b78] rounded-md hover:bg-gradient-to-r from-purple-500 to-pink-500">
+    <Link
+      className="p-[2px] w-fit flex justify-center items-center text-primary-text bg-[#676b78] rounded-md hover:bg-gradient-to-r from-purple-500 to-pink-500"
+      href={href}
+    >
       <span className="flex items-center gap-2 py-2.5 px-4 font-normal text-base  bg-[#323336] rounded-md">
-        <Link href={href} className="text-primary-text">
-          {text}
-        </Link>
+        {text}
         <Image src={arrowUpRight} alt="arrow-up-right" className="w-5 h-5" />
       </span>
-    </div>
+    </Link>
   );
 };
