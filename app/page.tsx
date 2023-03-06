@@ -16,6 +16,7 @@ export default function Home() {
           className="absolute top-0 left-0 z-20"
           initial="hidden"
           whileInView="show"
+          viewport={{ once: true }}
           variants={{
             hidden: {
               opacity: 0.3,
@@ -29,6 +30,7 @@ export default function Home() {
           className="absolute top-0 left-10 z-30"
           initial="hidden"
           whileInView="show"
+          viewport={{ once: true }}
           variants={slideIn({ direction: "left", delay: 0.8, duration: 0.4 })}
         >
           <Image src={poster} alt="poster" className="" />
