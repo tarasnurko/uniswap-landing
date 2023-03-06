@@ -38,27 +38,46 @@ export const LaunchLink = ({ href, text }: LinkTextProps) => {
 };
 
 interface ArrowLinkProps {
-  type: "title" | "subtitle";
   text: string;
   href: string;
 }
 
-export const ArrowLink = ({ type, text, href }: ArrowLinkProps) => {
-  const fontSize = type === "title" ? "20px" : "18px";
-
-  const className = `text-[${fontSize}] text-primary-text font-normal hover:text-amber-300 transition-colors`;
-
+export const ArrowLink = ({ text, href }: ArrowLinkProps) => {
   return (
-    <span className="flex gap-2">
-      <Link href={href} className={className}>
+    <span className="flex items-center gap-2">
+      <Link
+        href={href}
+        className="text-lg text-primary-text font-normal hover:text-amber-300 transition-colors"
+      >
         {text}
       </Link>
-      {type === "title" ? (
-        <Image src={arrowUpRight} alt="arrow-up-right" />
-      ) : (
-        <Image src={arrowRight} alt="arrow-right" className="w-5 h-5" />
-      )}
+
+      <Image src={arrowRight} alt="arrow-right" className="w-5 h-5" />
     </span>
+  );
+};
+
+interface DiagArrowLinkProps {
+  space?: boolean;
+  text: string;
+  href: string;
+}
+
+export const DiagArrowLink = ({
+  text,
+  space = false,
+  href,
+}: DiagArrowLinkProps) => {
+  return (
+    <Link
+      href={href}
+      className={`flex items-center gap-2 text-xl text-primary-text font-normal hover:text-orange-400 transition-colors ${
+        space ? "w-full justify-between" : ""
+      }`}
+    >
+      {text}
+      <Image src={arrowUpRight} alt="arrow-up-right" className="w-5 h-5" />
+    </Link>
   );
 };
 
@@ -66,3 +85,16 @@ interface ButtonLink {
   text: string;
   href: string;
 }
+
+export const ButtonLink = ({ text, href }: ButtonLink) => {
+  return (
+    <div className="p-[2px] w-fit flex justify-center items-center bg-[#676b78] rounded-md hover:bg-gradient-to-r from-purple-500 to-pink-500">
+      <span className="flex items-center gap-2 py-2.5 px-4 font-normal text-base  bg-[#323336] rounded-md">
+        <Link href={href} className="text-primary-text">
+          {text}
+        </Link>
+        <Image src={arrowUpRight} alt="arrow-up-right" className="w-5 h-5" />
+      </span>
+    </div>
+  );
+};

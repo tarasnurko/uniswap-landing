@@ -1,17 +1,13 @@
 "use client";
 
 import { ecosystemBg } from "@/assets/images";
-import { Counter } from "@/components";
-import Block from "@/components/Block";
-import { ArrowLink } from "@/components/Links";
-import { Text } from "@/components/Text";
-import { Title } from "@/components/TItles";
+import { Counter, Title, Text, ArrowLink, Block } from "@/components";
 import { slideIn } from "@/utils/motion";
 import { motion } from "framer-motion";
 
 const Ecosystem = () => {
   return (
-    <section className="py-10 px-8 w-full flex justify-between z-40">
+    <section className="py-10 px-8 container w-full flex justify-between z-40">
       <motion.div
         className="flex-1 flex flex-col gap-7"
         initial="hidden"

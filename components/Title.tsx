@@ -3,7 +3,7 @@ interface TitleProps {
   text: string;
 }
 
-export const Title = ({ type, text }: TitleProps) => {
+const Title = ({ type, text }: TitleProps) => {
   return (
     <h2
       className={`${
@@ -14,3 +14,5 @@ export const Title = ({ type, text }: TitleProps) => {
     </h2>
   );
 };
+
+export default Title;
