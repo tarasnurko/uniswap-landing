@@ -12,18 +12,20 @@ const Ecosystem = () => {
         className="flex-1 flex flex-col gap-7"
         initial="hidden"
         whileInView="show"
+        viewport={{ once: true }}
         variants={slideIn({ direction: "up", delay: 0.7 })}
       >
-        <ArrowLink text="UNISWAP ECOSYSTEM" href="#" type="subtitle" />
+        <ArrowLink text="UNISWAP ECOSYSTEM" href="#" />
         <div className="max-w-sm flex flex-col gap-6">
           <Title type="title1" text="A growing network of DeFi Apps." />
           <Text text="Developers, traders, and liquidity providers participate together in a financial marketplace that is open and accessible to all." />
         </div>
       </motion.div>
       <motion.div
-        className="flex-1 justify-end"
+        className="flex-1 flex justify-end"
         initial="hidden"
         whileInView="show"
+        viewport={{ once: true }}
         variants={slideIn({ direction: "right", delay: 1 })}
       >
         <Block

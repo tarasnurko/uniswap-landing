@@ -14,6 +14,7 @@ const Hero = () => {
             className="font-thin text-6xl text-primary-text"
             initial="hidden"
             whileInView="show"
+            viewport={{ once: true }}
             variants={slideIn({ direction: "up", delay: 0.6 })}
           >
             UNISWAP
@@ -22,6 +23,7 @@ const Hero = () => {
             className="font-semibold text-6xl text-primary-text"
             initial="hidden"
             whileInView="show"
+            viewport={{ once: true }}
             variants={slideIn({ direction: "left", delay: 0.8, duration: 0.6 })}
           >
             PROTOCOL
@@ -31,6 +33,7 @@ const Hero = () => {
           className="max-w-[735px] font-light text-2xl text-primary-text"
           initial="hidden"
           whileInView="show"
+          viewport={{ once: true }}
           variants={slideIn({ direction: "up", delay: 0.8, duration: 0.6 })}
         >
           Swap, earn, and build on the leading decentralized crypto trading
@@ -40,6 +43,7 @@ const Hero = () => {
           className="flex items-center gap-4"
           initial="hidden"
           whileInView="show"
+          viewport={{ once: true }}
           variants={slideIn({ direction: "up", delay: 0.8, duration: 0.6 })}
         >
           <Image src={twitter} alt="twitter" />
