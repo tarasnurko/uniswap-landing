@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Numbers = () => {
   return (
-    <section className="w-full py-24 flex items-center justify-center z-40 gap-10">
+    <section className="w-full py-24 flex items-center justify-center z-40 gap-14">
       <motion.div
         className="flex flex-col items-center"
         initial="hidden"
@@ -75,10 +75,9 @@ const Numbers = () => {
         <Counter
           from={0}
           to={4400}
-          precision={1}
           duration={1}
           delay={1.4}
-          postfix="T+"
+          postfix="+"
           className="font-bold text-5xl text-primary-text"
         />
         <span className="font-light text-sm text-primary-text">

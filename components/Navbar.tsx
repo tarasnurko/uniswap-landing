@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import logo from "../public/logo.svg";
-import { LaunchLink, LinkText } from "./LinkText";
+import { LaunchLink, LinkText } from "./Links";
 import { navVariants } from "@/utils/motion";
 import Link from "next/link";
 import { useContext, useState } from "react";
@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className="container sticky flex items-center justify-between py-3 sm:py-5"
+      className="px-10 container sticky flex items-center justify-between py-3 sm:py-5"
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
