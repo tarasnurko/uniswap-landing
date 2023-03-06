@@ -51,3 +51,25 @@ export const slideIn = ({
     },
   },
 });
+
+interface ZoomIn {
+  delay?: number;
+  duration?: number;
+}
+
+export const zoomIn = ({ delay = 0, duration = 0 }: ZoomIn): Variants => ({
+  hidden: {
+    scale: 0,
+    opacity: 0,
+  },
+  show: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      type: "tween",
+      delay,
+      duration,
+      ease: "easeOut",
+    },
+  },
+});

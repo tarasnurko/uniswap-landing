@@ -1,7 +1,7 @@
 "use client";
 
 import { Navbar, Footer } from "@/components";
-import { Developers, Ecosystem, Governance, Hero } from "@/sections";
+import { Developers, Ecosystem, Governance, Hero, Numbers } from "@/sections";
 import Image from "next/image";
 import { poster, grid } from "@/assets/images";
 import { motion } from "framer-motion";
@@ -37,6 +37,7 @@ export default function Home() {
         </motion.div>
         <Hero />
       </div>
+      <Numbers />
       <Ecosystem />
       <Developers />
       <Governance />

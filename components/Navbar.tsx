@@ -20,6 +20,7 @@ const Navbar = () => {
       className="container sticky flex items-center justify-between py-3 sm:py-5"
       initial="hidden"
       whileInView="show"
+      viewport={{ once: true }}
       variants={navVariants}
     >
       <Link href="#">
@@ -36,7 +37,7 @@ const Navbar = () => {
         <LaunchLink href="#" text="Launch App" />
       </div>
       <motion.button
-        className="px-5 py-3 flex lg:hidden flex-col items-end gap-[9px] bg-[#333437] rounded-md"
+        className="px-5 py-3 flex lg:hidden flex-col items-end gap-[9px] bg-[#333437] rounded-md hover:rounded-xl transition-all"
         onClick={handleMenu}
       >
         <span className="w-[38px] h-0.5 bg-[#7A7A7A] rounded-sm" />
